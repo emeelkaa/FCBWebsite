@@ -1,0 +1,277 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+body {
+  height: auto;
+  background-image: url("pictures/bg.jpg");
+  max-width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
+}
+button {
+  background-color: lightgrey;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.heading_index {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(138, 130, 130, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.heading_index>p::first-letter{
+  font-size: 25px;
+}
+
+.heading_index>span{
+  font-size:30px;
+  cursor:pointer;
+}
+
+.heading_index>img{
+  width:75px;
+  height:75px;
+}
+
+#floating_logos 
+{
+  height:auto;
+  position:relative;
+}
+
+div[class~="overlay"] {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(18, 16, 16, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus, .overlay .closebtn:hover, .overlay .closebtn:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  background-color: lightgrey;
+  padding:7px;
+  opacity: 0.5;
+  border: #ffffff;
+  border-radius: 20%;
+  font-size: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color: rgba(18, 16, 16, 0.8);
+  color: white;
+  border-radius: 10px;
+}
+
+div[class~="container"] {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(138, 130, 130, 0.4); /* Black w/opacity/see-through */
+  margin: auto;
+  width: 60%;
+  height: auto;
+  max-width: 600px;
+  border:1px solid rgba(255,255,255,0.5);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.container>img{
+  width:75px;
+  height:75px;
+}
+
+.title, .dropbtn {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.dropbtn {
+  background-color: rgba(138, 130, 130, 0.4);
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color:white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: rgba(138, 130, 130, 0.5);
+  min-width: 160px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.dropdown_content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown_content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.back {
+  border-radius: 10px;
+  background-color: rgba(138, 130, 130, 0.5);
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  padding: 12px;
+  width: 90px;
+  transition: all 0.5s;
+  cursor: pointer;
+  color:white;
+}
+
+.back>span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  clear: left;
+}
+
+.back>span::after {
+  content: '\2190';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 40px;
+  transition: 0.5s;
+  float: left;
+
+}
+
+.back:hover>span {
+  padding-right: 30px;
+}
+
+.back:hover>span::after {
+  opacity: 1;
+  right: 0;
+}
+
+.table>div,
+.tr,
+.td {
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.tr{
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+  font-weight: 300;
+  border: 1px solid #dedede;
+}
+
+.table>div {
+  display: table-header-group;
+}
+
+.table {
+  display: table;
+  background: rgba(138, 130, 130, 0.4);
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .overlay a {font-size: 30px}
+  .overlay .closebtn{
+  font-size: 10px;
+  top: 15px;
+  right: 35px;
+  }
+  .back, .dropbtn {
+    font-size: 10px;
+    }
+}
+
+
+

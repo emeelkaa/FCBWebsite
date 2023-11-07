@@ -1,0 +1,164 @@
+/*
+Version : 1.1.8
+ */
+:root {
+    --font: 'Lato', sans-serif;
+
+    --background-color: white;
+    --background-color-header: rgb(222, 222, 222);
+    --color-text: black;
+    --color-text-header: black;
+    --color-green: rgba(76, 225, 76, 0.886);
+    --color-red: #f64e60;
+    --color-yellow: #ffa800;
+
+    --primary-font-size: 12px;
+    --secondary-font-size: 10px;
+    --header-font-size: 13px;
+
+
+    --border-bottom: 0.5px solid var(--background-color-header);
+    --primary-padding: 3px 3px;
+    --primary-line-height: 15px;
+    --secondary-padding: .4rem;
+
+    /* STANDINGS WIDGET ONLY */
+    --standings-team-form-font-size: 9px; /* Only for team form and info button */
+    --standings-team-form-line-height: 16px;
+
+    /* LOGOS / FLAGS / PHOTOS */
+    --flags-size: 28px;
+    --teams-logo-size: 30px;
+    --teams-logo-size-large: 100px; /* Only in the modale or FIXTURE widget */
+    --teams-logo-size-medium: 50px; /* Only in the modale or FIXTURE widget <480px */
+    --teams-logo-border: 0px solid var(--background-color-header); /* 0px for no border, Only in the modale or FIXTURE widget */
+    --player-photo: 15px;  /* Only in the modale or FIXTURE widget */
+    --player-photo-large: 30px;  /* Only in the modale or FIXTURE widget <480px */
+}
+
+#wg-api-football-standings {
+    width:100%;
+}
+
+#standings{
+    font-family: var(--font);
+    width:100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: var(--primary-padding);
+    font-size: var(--primary-font-size);
+    letter-spacing: 0px;
+    line-height: var(--primary-line-height);
+    vertical-align: middle;
+    background: var(--background-color);
+    color: var(--color-text);
+    border-bottom: var(--border-bottom);
+}
+
+td > span {
+    vertical-align: middle;
+}
+
+.api_football_div_table {
+    padding: var(--primary-padding);
+    font-size: var(--primary-font-size);
+    letter-spacing: 0px;
+    line-height: var(--primary-line-height);
+    vertical-align: middle;
+}
+
+
+.api_football_header {
+    padding: var(--secondary-padding);
+    font-size: var(--header-font-size);
+    font-weight: 600;
+    background: var(--background-color-header);
+    color: var(--color-text-header);
+}
+
+.api_football_header > span {
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.api_football_logo {
+    width:var(--teams-logo-size);
+    vertical-align: middle;
+}
+
+.api_football_logo_xl{
+    height: var(--teams-logo-size-large);
+    border: var(--teams-logo-border);
+    padding: 10px;
+    margin: 10px;
+    vertical-align: middle;
+}
+.api_football_flag {
+    width: var(--flags-size);
+    vertical-align: middle;
+}
+
+.api_football_text_right {
+    text-align: right;
+}
+.api_football_text_center {
+    text-align: center;
+}
+.api_football_bolder {
+    font-weight: bold;
+}
+.api_football_bolder_600 {
+    font-weight: 600;
+}
+
+.api_football_font_size_10 {
+    font-size: var(--secondary-font-size);
+}
+
+.api_football_form {
+    display: inline-block;
+    margin: 1px;
+    width: 14px;
+    height: 14px;
+    line-height: var(--standings-team-form-line-height);
+    font-size: var(--standings-team-form-font-size);
+    text-align: center;
+    position: relative;
+    color: var(--background-color);
+}
+
+.api_football_form_win {
+    background: var(--color-green);
+}
+.api_football_form_draw {
+    background: var(--color-yellow);
+}
+.api_football_form_lose {
+    background: var(--color-red);
+}
+
+.api_football_info {
+    visibility: hidden;
+}
+
+.api_football_loader:after {
+  content: " ";
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  border-radius: 50%;
+  border: 6px solid rgb(222, 222, 222);
+  border-color: transparent rgb(222, 222, 222) transparent rgb(222, 222, 222);
+  animation: api_football_dual_ring 1.2s linear infinite;
+}
+@keyframes api_football_dual_ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
